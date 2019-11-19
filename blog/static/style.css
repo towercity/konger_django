@@ -156,7 +156,7 @@ img.biopic {
     header {
         width: 100vw;
         height: 150px;
-        /* background: url(../images/side.jpg) center center; */
+        background: url(assets/side.jpg) center center;
     }
     .header-links {
         position: absolute;
@@ -212,7 +212,7 @@ img.biopic {
         top: 0;
         width: 33.333vw;
         height: 100vh;
-        /* background: url(../images/side_large.jpg); */
+        background: url(assets/side_large.jpg);
         background-size: cover;
     }
     .header-links {
