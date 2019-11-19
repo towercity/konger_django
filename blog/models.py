@@ -29,3 +29,6 @@ class Post(models.Model):
 
 class Page(Post):
     sidebar = models.IntegerField(choices=SIDEBAR, default=0)
+
+class HomePage(Page):
+    slug = ''
