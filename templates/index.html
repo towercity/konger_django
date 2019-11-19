@@ -1,0 +1,20 @@
+{% extends "base.html" %} 
+{% block content %}
+
+<div class="posts">
+	{% for post in post_list %}
+	<article class="post">
+
+		<h1><a href="{% url 'post_detail' post.slug  %}" class="post-title">{{ post.title }}</a></h1>
+
+		<div class="entry">
+            {{post.content|slice:":200" }}
+		</div>
+
+		<a href="{% url 'post_detail' post.slug  %}" class="read-more">Read More</a>
+	</article>
+	<hr class="post-end">
+	{% endfor %}
+</div>
+
+{%endblock%}
