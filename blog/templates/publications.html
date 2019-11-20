@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="entry">
+    <ul>
+        {% for publication in publications %}
+        <li class="post">
+            "{{publication.title}}", <i>{{publication.journal}}</i>:
+            <a href="{{publication.link}}" alt="read online">x</a>, {{publication.publication_date}}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{%endblock%}

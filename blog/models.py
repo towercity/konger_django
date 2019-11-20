@@ -49,7 +49,7 @@ class Publication(models.Model):
     length = models.IntegerField(choices=LENGTH, default=0)
 
     title = models.CharField(max_length=200)
-    publication = models.CharField(max_length=200)
+    journal = models.CharField(max_length=200)
     publish_date = models.DateField()
     link = models.URLField(max_length=600)
 
