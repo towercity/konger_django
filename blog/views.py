@@ -14,7 +14,3 @@ class PostDetail(generic.DetailView):
 class PageView(generic.DetailView):
     model = Page
     template_name = 'page.html'
-
-def home_page(request):
-    home = Page.objects.filter(slug__exact="home")
-    return render(request, 'page.html', home)
