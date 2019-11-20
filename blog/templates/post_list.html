@@ -1,20 +1,18 @@
-{% extends "base.html" %} 
-{% block content %}
+{% extends "base.html" %} {% block title %} Blog {%endblock%} {% block content %}
 
 <div class="posts">
-	{% for post in post_list %}
-	<article class="post">
+    {% for post in post_list %}
+    <article class="post">
 
-		<h1><a href="{% url 'post_detail' post.slug  %}" class="post-title">{{ post.title }}</a></h1>
+        <h1><a href="{% url 'post_detail' post.slug  %}" class="post-title">{{ post.title }}</a></h1>
 
-		<div class="entry">
+        <div class="entry">
             {{post.content|slice:":200" }}
-		</div>
+        </div>
 
-		<a href="{% url 'post_detail' post.slug  %}" class="read-more">Read More</a>
-	</article>
-	<hr class="post-end">
-	{% endfor %}
+        <a href="{% url 'post_detail' post.slug  %}" class="read-more">Read More</a>
+    </article>
+    <hr class="post-end"> {% endfor %}
 </div>
 
 {%endblock%}
