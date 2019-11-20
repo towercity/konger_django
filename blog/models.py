@@ -22,7 +22,7 @@ class GenericPost(models.Model):
         return self.title
 
 class Page(GenericPost):
-    side_link = models.IntegerField(choices=STATUS, default=0)
+    side_link = models.IntegerField(choices=SIDEBAR, default=0)
 
 class Post(GenericPost): 
     status = models.IntegerField(choices=STATUS, default=0)
