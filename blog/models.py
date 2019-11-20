@@ -12,6 +12,16 @@ SIDEBAR = (
     (1,"Show")
 )
 
+GENRES = (
+    (0,"Fiction"),
+    (1,"None")
+)
+
+LENGTH = (
+    (0,"Short Story"),
+    (1,"Flash")
+)
+
 # Create your models here.
 class GenericPost(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -31,3 +41,17 @@ class Post(GenericPost):
 
     class Meta:
         ordering = ['-created_on']
+
+class Publication(models.Model): 
+    genre = models.IntegerField(choices=GENRES, default=0)
+    length = models.IntegerField(choices=LENGTH, default=0)
+
+    title = models.CharField(max_length=200)
+    publication = models.CharField(max_length=200)
+    publish_date = models.DateField()
+    link = models.URLField(max_length=600)
+
+    document = models.FileField(upload_to='uploads/published_work/')
+
+    def __str__(self): 
+        return self.title
