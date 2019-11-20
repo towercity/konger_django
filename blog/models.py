@@ -43,6 +43,8 @@ class Post(GenericPost):
         ordering = ['-created_on']
 
 class Publication(models.Model): 
+    status = models.IntegerField(choices=STATUS, default=0)
+
     genre = models.IntegerField(choices=GENRES, default=0)
     length = models.IntegerField(choices=LENGTH, default=0)
 
