@@ -32,6 +32,8 @@ class GenericPost(models.Model):
         return self.title
 
 class Page(GenericPost):
+    photo = models.ImageField(upload_to='page_images')
+
     side_link = models.IntegerField(choices=SIDEBAR, default=0)
 
 class Post(GenericPost): 
