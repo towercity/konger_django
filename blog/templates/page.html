@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="entry">
-    {{ object.content }}
+    {{ object.content | linebreaks }}
 </div>
 
 <br><br> {% endblock content %}
