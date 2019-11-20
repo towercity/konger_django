@@ -2,10 +2,10 @@
 
 <div class="entry">
     <ul>
-        {% for publication in publications %}
+        {% for publication in publication_list %}
         <li class="post">
             "{{publication.title}}", <i>{{publication.journal}}</i>:
-            <a href="{{publication.link}}" alt="read online">x</a>, {{publication.publication_date}}
+            <a href="{{publication.link}}" target="_blank" alt="read online">x</a>, {{publication.publish_date}}
         </li>
         {% endfor %}
     </ul>

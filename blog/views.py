@@ -11,10 +11,10 @@ class PostDetail(generic.DetailView):
     model = Post
     template_name = 'post.html'
 
-class PageView(generic.DetailView):
-    model = Page
-    template_name = 'page.html'
-
 class PublicationsList(generic.ListView):
     queryset = Publication.objects.filter(status=1).order_by('publish_date')
     template_name = 'publications.html'
+
+class PageView(generic.DetailView):
+    model = Page
+    template_name = 'page.html'
