@@ -1,13 +1,12 @@
-{% extends "base.html" %} {% block title %} Publications {%endblock%} {% block win_title %} Publications {%endblock%} {% block content %}
+{% extends "base.html" %} {% block title %} Publications {%endblock%} {% block win_title %} Blog {%endblock%} {% block content %}
 
 
 <div class="entry">
     <h3>Fiction</h3>
     <ul>
         {% for publication in publication_list %} {% if publication.genre == 0 %}
-        <li class="post">
-            "{{publication.title}}", <i>{{publication.journal}}</i>:
-            <a href="{{publication.link}}" target="_blank" alt="read online">x</a>, {{publication.publish_date | date:"Y"}}
+        <li>
+            {% if publication.link %}<a href="{{publication.link}}" target="_blank" alt="read online">{%endif%}{{publication.title}}{% if publication.link %}</a>{%endif%}: <i>{{publication.journal}}</i>, {{publication.publish_date | date:"Y"}}
         </li>
         {% endif %} {% endfor %}
     </ul>
