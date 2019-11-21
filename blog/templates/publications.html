@@ -1,13 +1,14 @@
 {% extends "base.html" %} {% block title %} Publications {%endblock%} {% block content %}
 
 <div class="entry">
+    <h3>Fiction</h3>
     <ul>
-        {% for publication in publication_list %}
+        {% for publication in publication_list %} {% if publication.genre == 0 %}
         <li class="post">
             "{{publication.title}}", <i>{{publication.journal}}</i>:
             <a href="{{publication.link}}" target="_blank" alt="read online">x</a>, {{publication.publish_date}}
         </li>
-        {% endfor %}
+        {% endif %} {% endfor %}
     </ul>
 </div>
 
