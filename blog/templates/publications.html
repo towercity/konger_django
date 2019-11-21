@@ -7,7 +7,7 @@
         {% for publication in publication_list %} {% if publication.genre == 0 %}
         <li class="post">
             "{{publication.title}}", <i>{{publication.journal}}</i>:
-            <a href="{{publication.link}}" target="_blank" alt="read online">x</a>, {{publication.publish_date}}
+            <a href="{{publication.link}}" target="_blank" alt="read online">x</a>, {{publication.publish_date | date:"Y"}}
         </li>
         {% endif %} {% endfor %}
     </ul>
