@@ -7,10 +7,8 @@
         <h1><a href="{% url 'post_detail' post.slug  %}" class="post-title">{{ post.title }}</a></h1>
 
         <div class="entry">
-            {{post.content|slice:":200" }}
+            {{post.content | safe | linebreaks }}
         </div>
-
-        <a href="{% url 'post_detail' post.slug  %}" class="read-more">Read More</a>
     </article>
     <hr class="post-end"> {% endfor %}
 </div>
