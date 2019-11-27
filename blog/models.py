@@ -55,7 +55,7 @@ class Publication(models.Model):
     publish_date = models.DateField()
     link = models.URLField(max_length=600, blank=True)
 
-    document = models.FileField(upload_to='uploads/published_work/', blank=True)
+    document = models.FileField(upload_to='published_work', blank=True)
 
     def __str__(self): 
         return self.title

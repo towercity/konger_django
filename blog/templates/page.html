@@ -2,7 +2,7 @@
 
 <div class="entry">
     {% if object.photo %}
-    <img class="biopic" src="/{{object.photo}}"> {%endif%} {{ object.content | safe | linebreaks }}
+    <img class="biopic" src="/media/{{object.photo}}"> {%endif%} {{ object.content | safe | linebreaks }}
 </div>
 
 <br><br> {% endblock content %}
