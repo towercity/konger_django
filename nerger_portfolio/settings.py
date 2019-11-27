@@ -27,7 +27,7 @@ SECRET_KEY = '6zyuz3x#z-pj058#cj2r(son2oom5_2dd6^k^fye^6#gks42wm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['jakobkonger.com', 'www.jakobkonger.com', '167.172.28.52']
 
 
 # Application definition
@@ -121,6 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/home/mnerger/portfolio_django/nerger_portfolio/static-root/'
 
-MEDIA_URL = '/uploads/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = '/home/mnerger/portfolio_django/nerger_portfolio/media-root/'
