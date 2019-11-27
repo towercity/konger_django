@@ -1,5 +1,5 @@
 """
-WSGI config for konger_blog project.
+WSGI config for nerger_portfolio project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'konger_blog.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'nerger_portfolio.settings')
 
 application = get_wsgi_application()
