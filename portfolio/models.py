@@ -2,7 +2,13 @@ from django.db import models
 
 # Create your models here.
 class Language(models.Model):
+    DISPLAY = (
+        (0, "Hide"),
+        (1, "Show")
+    )
+
     name = models.CharField(max_length=100)
+    show_in_bar = models.IntegerField(choices=DISPLAY)
 
     def __str__(self): 
         return self.name
