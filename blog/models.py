@@ -31,6 +31,9 @@ class GenericPost(models.Model):
     def __str__(self): 
         return self.title
 
+    class Meta:
+        abstract = True
+
 class Page(GenericPost):
     photo = models.ImageField(upload_to='page_images', blank=True)
 
