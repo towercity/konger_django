@@ -34,7 +34,7 @@ class Project(models.Model):
     # Meta stuff
     languages = models.ManyToManyField(Language)
     display = models.IntegerField(choices=DISPLAY)
-    built_date = models.DateTimeField()
+    built_date = models.DateField()
 
     def __str__(self): 
         return self.title
