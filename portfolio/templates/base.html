@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'> {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <title>
+        Matthew J Nerger | {% block win_title %} {{ object.title }} {% endblock win_title %}
+    </title>
+
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Eczar|Raleway" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-img"></div>
+
+        <nav class="header-links">
+            <!-- left links -->
+            <ul>
+                <li>
+                    <a href="#" alt="about me" class="float-left">about</a>
+                </li>
+                <li>
+                    <a href="https://github.com/towercity" alt="github profile" target="_blank" class="float-left">github</a>
+                </li>
+            </ul>
+
+            <!-- logo -->
+            <div class="logo">
+                <a href="/"><img src="images/logo.png" alt="logo"></a>
+            </div>
+
+            <!-- right links -->
+            <ul>
+                <li><a href="/resume" alt="resume" target="_blank" class="float-right">resume</a></li>
+                <li><a href="mailto:matthewjnerger3@gmail.com" alt="contact" class="float-right">contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-color"></div>
+    </header>
+
+
+    <!--main page-->
+    <div class="content">
+        <!--page title bar-->
+        <div class="pagehead-wrap">
+            <div class="title-wrap">
+                <h1 class="title">Matthew J Nerger</h1>
+            </div>
+            <div class="subtitle-wrap">
+                <h2 class="subtitle">Full-Stack Developer</h2>
+            </div>
+        </div>
+
+        <!--languages list-->
+        <div id="lang-list">
+            {% block lang_list %} {% endblock %}
+        </div>
+
+        <!--page content-->
+        <article>
+            <div id="code-projects">
+                {% block code_projects %} {% endblock %}
+            </div>
+
+            <div id="about">
+                <h1>Hi!</h1>
+                <p>
+                    My name's Matthew Nerger. I'm a writer and front-end web developer currently based in New York City. I've been coding for the web since early 2015, and I've built and maintained websites for a number of clients, many of which you can read about
+                    <a id="all-link" href="#">above</a>.
+                </p>
+                <p>
+                    Visit my <a href="https://github.com/towercity" target="_blank">GitHub</a> page to see more of my work, or check out my
+                    <a href="http://www.matthewjnerger.com/resume/" target="_blank">resume</a> to read up on education and work history.
+                </p>
+                <p>
+                    In addition, I write and produce <a href="https://popularmusic.bandcamp.com/" target="_blank">music</a>, and write interesting fiction on the side.
+                </p>
+                <p>
+                    Drop me an <a href="mailto:matthewjnerger3@gmail.com">email</a> if you'd like me to build you something. I'm always eager to create more.
+                </p>
+                <div id="biopic">
+                    <img src="images/biopic.png">
+                </div>
+            </div>
+        </article>
+
+
+    </div>
+
+</body>
+
+</html>
