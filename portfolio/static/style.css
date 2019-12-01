@@ -345,10 +345,12 @@
                     position: relative;
                 }
                 
-                #lang-list {
+                #lang-list,
+                #lang-list a {
                     color: #f3faea;
                     margin: 0 auto;
                     text-align: center;
+                    text-decoration: none;
                 }
                 
                 #lang-list.fixed-lang {
@@ -372,7 +374,8 @@
                     padding: 0 5px;
                 }
                 
-                #lang-list li:hover {
+                #lang-list li:hover,
+                #lang-list li a:hover {
                     color: #d3d3d3;
                 }
                 
