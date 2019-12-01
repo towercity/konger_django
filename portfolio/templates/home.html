@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block lang_list %}
+<ul>
+    {% for lang in language_list %}
+    <li>
+        {{lang.name}}
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
