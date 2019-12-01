@@ -7,4 +7,19 @@
     {% endfor %}
 </ul>
 
-{% endblock %}
+{% endblock %} {% block code_projects %}
+<div class="row code-row">
+    {% for project in project_list %}
+    <div class="code-sample">
+        <a href="{{project.link}}" target="_none">
+            <img src="/media/{{project.logo}}">
+            <div class="code-sample-text">
+                <h3>{{project.title}}</h3>
+            </div>
+        </a>
+
+        {{project.short_description | safe | linebreaks}}
+    </div>
+    {% endfor %}
+</div>
+{%endblock %}
