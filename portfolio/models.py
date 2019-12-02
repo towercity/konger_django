@@ -7,7 +7,7 @@ class Language(models.Model):
         (1, "Show")
     )
 
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True)
     show_in_bar = models.IntegerField(choices=DISPLAY)
 
     def __str__(self): 

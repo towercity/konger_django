@@ -2,10 +2,10 @@
 <ul>
     {% for lang in language_list %}
     <li>
-        {{lang.name}}
+        <a href="/lang/{{lang.name | lower}}">{{lang.name}}</a>
     </li>
     - {% endfor %}
-    <li><a href="/">Show All</a></li>
+    <li><a href="/home">Show All</a></li>
 </ul>
 
 {% endblock %} {% block code_projects %}
