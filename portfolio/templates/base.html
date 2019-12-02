@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
 
     <title>
-        Matthew J Nerger | {% block win_title %} {{ object.title }} {% endblock win_title %}
+        Matthew J Nerger | {% block win_title %} Full-Stack Developer {% endblock win_title %}
     </title>
 
     <!--Google fonts-->
@@ -55,7 +55,9 @@
                 <h1 class="title">Matthew J Nerger</h1>
             </div>
             <div class="subtitle-wrap">
-                <h2 class="subtitle">Full-Stack Developer</h2>
+                <h2 class="subtitle">
+                    {% block subtitle %} Full-Stack Developer {% endblock subtitle %}
+                </h2>
             </div>
         </div>
 

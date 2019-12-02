@@ -17,3 +17,11 @@ class Index(generic.ListView):
 class Projects(Index):
     def get_queryset(self):
         return Project.objects.filter(display=1).filter(languages__name__iexact=self.kwargs['lang_name'])
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['language_list'] = Language.objects.filter(show_in_bar=1)
+        context['page_title'] = Language.objects.filter(name__iexact=self.kwargs['lang_name'])
+        return context
+
+    template_name = 'langs.html'
