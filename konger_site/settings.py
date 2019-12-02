@@ -125,7 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/mnerger/portfolio_django/konger_site/static-root/'
+STATIC_ROOT = '/home/mnerger/portfolio_django/konger_site/static-root/konger_site'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/home/mnerger/portfolio_django/konger_site/media-root/'
+MEDIA_ROOT = '/home/mnerger/portfolio_django/konger_site/media-root/konger_site'
