@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
-    'portfolio'
+    'portfolio',
+    'spell_log',
 ]
 
 MIDDLEWARE = [
