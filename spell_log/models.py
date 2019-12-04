@@ -10,14 +10,15 @@ class Spell(models.Model):
     SPELL_CATEGORIES = (
         (0,"ダメージ"),
         (1,"かいふく"),
-        (2,"その他")
+        (2,"その他"),
+        (3,"Field")
     )
 
     name = models.CharField(max_length=200, unique=True)
     name_english = models.CharField(max_length=200, blank=True)
 
     spell_type = models.IntegerField(choices=SPELL_TYPES, default=0)
-    spell_category = models.IntegerField(choices=SPELL_CATEGORIES, blank=True)
+    spell_category = models.IntegerField(choices=SPELL_CATEGORIES, blank=True, default=2)
 
     description = models.TextField()
     description_english = models.TextField(blank=True)
