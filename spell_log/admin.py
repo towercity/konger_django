@@ -13,6 +13,9 @@ class ClassInline(admin.TabularInline):
 class SpellAdmin(admin.ModelAdmin):
     inlines = (UserInline,ClassInline,)
 
+    list_display = ('name','spell_type','spell_category','description','cost',)
+    list_filter = ('user','class_user')
+
 
 admin.site.register(Spell, SpellAdmin)
 admin.site.register(Character)

@@ -24,10 +24,10 @@ class Spell(models.Model):
 
     cost = models.IntegerField()
 
-    user = models.ManyToManyField('Character', through='CharacterLearns')
-    class_user = models.ManyToManyField('Class', through='ClassLearns')
+    user = models.ManyToManyField('Character', through='CharacterLearns', blank=True)
+    class_user = models.ManyToManyField('Class', through='ClassLearns', blank=True)
 
-    notes = models.TextField()
+    notes = models.TextField(blank=True)
 
     def __str__(self):
         return self.name
@@ -38,7 +38,7 @@ class Character(models.Model):
     game = models.ForeignKey('Game', on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
 class CharacterLearns(models.Model):
     character = models.ForeignKey('Character', on_delete=models.CASCADE)
@@ -47,7 +47,7 @@ class CharacterLearns(models.Model):
     level = models.IntegerField(blank=True)
 
     def __str__(self):
-        return self.character
+        return str(self.character)
 
 class Class(models.Model):
     name = models.CharField(max_length=200, unique=True)
@@ -55,7 +55,7 @@ class Class(models.Model):
     game = models.ForeignKey('Game', on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
 class ClassLearns(models.Model):
     character = models.ForeignKey('Class', on_delete=models.CASCADE)
@@ -64,10 +64,10 @@ class ClassLearns(models.Model):
     level = models.IntegerField(blank=True)
 
     def __str__(self):
-        return self.character
+        return str(self.character)
 
 class Game(models.Model):
     name = models.CharField(max_length=200, unique=True)
 
     def __str__(self):
-        return self.name
+        return str(self.name)
