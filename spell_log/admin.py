@@ -20,6 +20,4 @@ class SpellAdmin(admin.ModelAdmin):
 admin.site.register(Spell, SpellAdmin)
 admin.site.register(Character)
 admin.site.register(Class)
-admin.site.register(CharacterLearns)
-admin.site.register(ClassLearns)
 admin.site.register(Game)
